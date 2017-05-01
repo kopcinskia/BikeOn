@@ -1,9 +1,27 @@
      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+         width: 70%;
+         height: 100%;
+     }
+     /* Optional: Makes the sample page fill the window. */
+     
+     html,
+     body {
+         height: 100%;
+         margin: 0;
+         padding: 0;
+     }
+     
+     #side {
+         position: absolute;
+         top: 0px;
+         right: 0px;
+         width: 30%;
+         overflow: auto;
+         height: 100%
+     }
+     
+     #side #addMarker {
+         width: 100%;
+         padding: 10px;
+         box-sizing: border-box;
+     }

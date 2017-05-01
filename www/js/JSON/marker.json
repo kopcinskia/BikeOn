@@ -2,16 +2,26 @@ eqfeed_callback({
 
     "favourite": [{
 
-            "name": "Seba",
+            "name": "DAGO",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
             "geometry": {
-                "coordinates": [-173.5727, -16.6875, 45.25]
+                "coordinates": [107.6156, -6.8919]
+
             },
         },
 
         {
-            "name": "Grzesio",
+            "name": "Yogyakarta",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
             "geometry": {
-                "coordinates": [52.6327, 28.4962, 32.58]
+                "coordinates": [110.3694, -7.7955]
             },
-        }]
+                },
+        {
+            "name": "Grzesio",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [112.7520, -7.2574]
+            },
+                    }, ]
 })

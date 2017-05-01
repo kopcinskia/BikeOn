@@ -1,7 +1,7 @@
  google.maps.event.addDomListener(window, 'load', initialize)
 
  let map
- let markers = []
+
  //initialize Map
  function initialize() {
 
@@ -11,8 +11,9 @@
      }
      let map = new google.maps.Map(document.getElementById('map'), {
          center: hire,
-         zoom: 2,
+         zoom: 5,
          zoomControlOptions: {
+             //pozycja paska zoom 
              position: google.maps.ControlPosition.RIGHT_TOP
          }
 
@@ -41,22 +42,40 @@
          bikeLayer.setMap(map)
      })
 
+
      //LOAD JSON
-     var script = document.createElement('script');
+     let script = document.createElement('script');
      script.src = 'http://192.168.2.91:8080/Cycling/js/JSON/marker.json'
      document.getElementsByTagName('head')[0].appendChild(script);
-     // Loop through the results array and place a marker for each
-     // set of coordinates.
+
+     //JSON display
      window.eqfeed_callback = function (results) {
          for (var i = 0; i < results.favourite.length; i++) {
-             var coords = results.favourite[i].geometry.coordinates;
-             var title = results.favourite[i].name;
-             var latLng = new google.maps.LatLng(coords[1], coords[0])
-             var marker = new google.maps.Marker({
+             let coords = results.favourite[i].geometry.coordinates
+             let title = results.favourite[i].name
+             let icon = results.favourite[i].iconType
+             let latLng = new google.maps.LatLng(coords[1], coords[0])
+             let marker = new google.maps.Marker({
+                 icon: icon,
                  position: latLng,
                  map: map,
                  title: title
              });
          }
      }
+     google.maps.event.addListener(map, 'click', function (event) {
+         addMarker(event.latLng, map);
+     });
+     addMarker(map);
  }
+ // Adds a marker to the map.
+ function addMarker(location, map) {
+
+     var marker = new google.maps.Marker({
+         position: location,
+
+         map: map
+     });
+ }
+
+ google.maps.event.addDomListener(window, 'load', initialize);
