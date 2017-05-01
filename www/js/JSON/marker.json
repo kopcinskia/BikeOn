@@ -2,26 +2,46 @@ eqfeed_callback({
 
     "favourite": [{
 
-            "name": "DAGO",
+            "name": "WARSAW",
             "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
             "geometry": {
-                "coordinates": [107.6156, -6.8919]
-
+                "coordinates": [21.0, 52.2]
             },
         },
 
         {
-            "name": "Yogyakarta",
+            "name": "WROCŁAW",
             "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
             "geometry": {
-                "coordinates": [110.3694, -7.7955]
+                "coordinates": [17.0, 51.1]
             },
                 },
         {
-            "name": "Grzesio",
+            "name": "PAZNAŃ",
             "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
             "geometry": {
-                "coordinates": [112.7520, -7.2574]
+                "coordinates": [16.9, 52.4]
+            },
+                    },
+        {
+            "name": "SZCZECIN",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [14.5, 53.4]
+            },
+                    },
+        {
+            "name": "PAZNAŃ",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [16.9, 52.4]
+            },
+                    },
+        {
+            "name": "KRAKÓW",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [19.9, 50.0]
             },
                     }, ]
 })
