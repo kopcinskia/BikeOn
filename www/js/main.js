@@ -41,8 +41,11 @@
          trafficLayer.setMap(null)
          bikeLayer.setMap(map)
      })
-
-
+     $('#add').click(function () {
+         google.maps.event.addListener(map, 'click', function (event) {
+             addMarker(event.latLng, map);
+         })
+     })
      //LOAD JSON
      let script = document.createElement('script');
      script.src = 'http://192.168.2.91:8080/Cycling/js/JSON/marker.json'
@@ -63,19 +66,19 @@
              });
          }
      }
-     google.maps.event.addListener(map, 'click', function (event) {
-         addMarker(event.latLng, map);
-     });
-     addMarker(map);
  }
  // Adds a marker to the map.
  function addMarker(location, map) {
+     let ninia = 'img/ninja.png',
+         samurai = 'img/samurai.png',
+         pin = 'img/pin.png',
+         selectIcon = document.querySelector('#iconType'),
+         selectName = document.querySelector('#markerName')
 
      var marker = new google.maps.Marker({
          position: location,
-
-         map: map
+         map: map,
+         title: selectName.value,
+         icon: selectIcon.value
      });
  }
-
- google.maps.event.addDomListener(window, 'load', initialize);
