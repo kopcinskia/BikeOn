@@ -42,9 +42,17 @@
          bikeLayer.setMap(map)
      })
      $('#add').click(function () {
+
+
          google.maps.event.addListener(map, 'click', function (event) {
              addMarker(event.latLng, map);
+
          })
+
+
+     })
+     $('#save').click(function () {
+
      })
      //LOAD JSON
      let script = document.createElement('script');
@@ -69,10 +77,8 @@
  }
  // Adds a marker to the map.
  function addMarker(location, map) {
-     let ninia = 'img/ninja.png',
-         samurai = 'img/samurai.png',
-         pin = 'img/pin.png',
-         selectIcon = document.querySelector('#iconType'),
+
+     selectIcon = document.querySelector('#iconType'),
          selectName = document.querySelector('#markerName')
 
      var marker = new google.maps.Marker({
