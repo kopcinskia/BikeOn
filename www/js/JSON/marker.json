@@ -1,0 +1,17 @@
+eqfeed_callback({
+
+    "favourite": [{
+
+            "name": "Seba",
+            "geometry": {
+                "coordinates": [-173.5727, -16.6875, 45.25]
+            },
+        },
+
+        {
+            "name": "Grzesio",
+            "geometry": {
+                "coordinates": [52.6327, 28.4962, 32.58]
+            },
+        }]
+})
