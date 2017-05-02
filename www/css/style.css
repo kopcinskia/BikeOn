@@ -1,0 +1,175 @@
+body
+{
+
+}
+
+/*-=/=--=/=--=/=--=/=--=/=--=/=--=/=-*/
+/*-=-=-=-=-=-Strona_Główna-=-=-=-=-=-*/
+/*-=/=--=/=--=/=--=/=--=/=--=/=--=/=-*/
+
+/* --- HEADER / PANELS--- */
+
+.header{
+    display: flex;
+    padding: 0 3px;
+}
+
+.ui-bar-header-element{
+    background-color: #464B61;
+    border-color: #464B61;
+    color: white;
+	z-index: 1000;
+}
+
+.menu-icon{
+    margin-top: 7px;
+}
+
+.marker-icon{
+    margin-top: 11px;
+}
+
+.svg-menu {
+    width: 29px;
+}
+
+.svg-map {
+    width: 21px;
+}
+
+.svg-icons {
+    padding-right: 10px;
+    width: 14px;
+}
+
+.svg-menu, .svg-map{
+    margin: 0 8px;
+}
+
+.menu-icon, .title, .marker-icon{
+    display: table-cell;
+}
+
+.title {
+    margin-left: -2px;
+    text-align: center;
+    width: 100%;
+}
+
+.title g{
+    font-weight: 600;
+}
+
+.title > h1{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 12px;
+    text-shadow: none;
+}
+
+#menuPanel ul{
+    list-style: none;
+    margin-top: 35px;
+    padding-left: 0;
+}
+
+#menuPanel button{
+    bottom: 7px;
+    position: absolute;
+    width: 85%;
+}
+
+li{
+    align-items: baseline;
+    display: flex;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+/* --- CONTENT --- */
+
+
+
+/* --- FOOTER --- */
+
+.ui-bar-footer-element{
+    background-color: #464B61;
+    border-color: none;
+    color: white;
+}
+
+.footer-container{
+    padding: 15px;
+}
+
+.newRoute{
+    width: 100%;
+}
+
+#infoBlock{
+    display: inline-table;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-shadow: none;
+    width: 100%;
+}
+
+#infoBlock p{
+    margin: 0px;
+}
+
+#infoLeft, #infoRight{
+    display: table-cell;
+}
+
+#infoLeft{
+    width: 55%;
+}
+
+.infoSpeed{
+    border-width: 0px 2px 2px;
+}
+
+.infoTime{
+    border-width: 2px;
+}
+
+.infoTime, .infoSpeed{
+    background-color: #dfdfdf;
+    border-color: blue;
+    border-style: solid;
+    height: 60px;
+}
+
+.infoDistance{
+    background-color: #dfdfdf;
+    border-color: blue;
+    border-style: solid;
+    border-width: 2px 0 2px 2px;
+    height: 122px;
+}
+
+.infoDistance p:nth-child(1){
+    font-size: 40px;
+}
+
+.infoTime > .infoContainer p:nth-child(1), .infoSpeed > .infoContainer p:nth-child(1), .infoDistance > .infoContainer p:nth-child(1){
+    font-size: 30px;
+}
+
+
+.newRoute{
+    background-color: #e45757;
+    border: solid 1px #e45757;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 14px 32px;
+    text-align: center;
+    text-decoration: none;
+}

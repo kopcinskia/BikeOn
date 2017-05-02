@@ -134,7 +134,7 @@
      })
      //LOAD JSON
      let script = document.createElement('script');
-     script.src = 'http://192.168.2.91:8080/Cycling/js/JSON/marker.json'
+     script.src = 'http://192.168.0.102:8080/BikeOn_FrontEnd/js/JSON/marker.json'
      document.getElementsByTagName('head')[0].appendChild(script);
 
      //JSON display
