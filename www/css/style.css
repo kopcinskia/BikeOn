@@ -1,31 +1,34 @@
-body
-{
+body {}
 
-}
 
 /*-=/=--=/=--=/=--=/=--=/=--=/=--=/=-*/
+
+
 /*-=-=-=-=-=-Strona_Główna-=-=-=-=-=-*/
+
+
 /*-=/=--=/=--=/=--=/=--=/=--=/=--=/=-*/
+
 
 /* --- HEADER / PANELS--- */
 
-.header{
+.header {
     display: flex;
     padding: 0 3px;
 }
 
-.ui-bar-header-element{
+.ui-bar-header-element {
     background-color: #464B61;
     border-color: #464B61;
     color: white;
-	z-index: 1000;
+    z-index: 1000;
 }
 
-.menu-icon{
+.menu-icon {
     margin-top: 7px;
 }
 
-.marker-icon{
+.marker-icon {
     margin-top: 11px;
 }
 
@@ -42,11 +45,14 @@ body
     width: 14px;
 }
 
-.svg-menu, .svg-map{
+.svg-menu,
+.svg-map {
     margin: 0 8px;
 }
 
-.menu-icon, .title, .marker-icon{
+.menu-icon,
+.title,
+.marker-icon {
     display: table-cell;
 }
 
@@ -56,11 +62,11 @@ body
     width: 100%;
 }
 
-.title g{
+.title g {
     font-weight: 600;
 }
 
-.title > h1{
+.title>h1 {
     color: white;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -69,46 +75,62 @@ body
     text-shadow: none;
 }
 
-#menuPanel ul{
+
+/*DODAŁEM CI TE 2 KLASY pageone i map OStyluj je porządnie */
+
+#pageoneMAP {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 55%;
+    width: 100%;
+}
+
+#menuPanel ul {
     list-style: none;
     margin-top: 35px;
     padding-left: 0;
 }
 
-#menuPanel button{
+#menuPanel button {
     bottom: 7px;
     position: absolute;
     width: 85%;
 }
 
-li{
+li {
     align-items: baseline;
     display: flex;
     line-height: 50px;
     text-transform: uppercase;
 }
 
-/* --- CONTENT --- */
 
+/* --- CONTENT --- */
 
 
 /* --- FOOTER --- */
 
-.ui-bar-footer-element{
+.ui-bar-footer-element {
     background-color: #464B61;
     border-color: none;
     color: white;
 }
 
-.footer-container{
+.footer-container {
     padding: 15px;
 }
 
-.newRoute{
+.newRoute {
     width: 100%;
 }
 
-#infoBlock{
+#infoBlock {
     display: inline-table;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -117,34 +139,36 @@ li{
     width: 100%;
 }
 
-#infoBlock p{
+#infoBlock p {
     margin: 0px;
 }
 
-#infoLeft, #infoRight{
+#infoLeft,
+#infoRight {
     display: table-cell;
 }
 
-#infoLeft{
+#infoLeft {
     width: 55%;
 }
 
-.infoSpeed{
+.infoSpeed {
     border-width: 0px 2px 2px;
 }
 
-.infoTime{
+.infoTime {
     border-width: 2px;
 }
 
-.infoTime, .infoSpeed{
+.infoTime,
+.infoSpeed {
     background-color: #dfdfdf;
     border-color: blue;
     border-style: solid;
     height: 60px;
 }
 
-.infoDistance{
+.infoDistance {
     background-color: #dfdfdf;
     border-color: blue;
     border-style: solid;
@@ -152,16 +176,17 @@ li{
     height: 122px;
 }
 
-.infoDistance p:nth-child(1){
+.infoDistance p:nth-child(1) {
     font-size: 40px;
 }
 
-.infoTime > .infoContainer p:nth-child(1), .infoSpeed > .infoContainer p:nth-child(1), .infoDistance > .infoContainer p:nth-child(1){
+.infoTime>.infoContainer p:nth-child(1),
+.infoSpeed>.infoContainer p:nth-child(1),
+.infoDistance>.infoContainer p:nth-child(1) {
     font-size: 30px;
 }
 
-
-.newRoute{
+.newRoute {
     background-color: #e45757;
     border: solid 1px #e45757;
     border-radius: 3px;
