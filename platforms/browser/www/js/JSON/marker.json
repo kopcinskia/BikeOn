@@ -2,16 +2,46 @@ eqfeed_callback({
 
     "favourite": [{
 
-            "name": "Seba",
+            "name": "WARSAW",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
             "geometry": {
-                "coordinates": [-173.5727, -16.6875, 45.25]
+                "coordinates": [21.0, 52.2]
             },
         },
 
         {
-            "name": "Grzesio",
+            "name": "WROCŁAW",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
             "geometry": {
-                "coordinates": [52.6327, 28.4962, 32.58]
+                "coordinates": [17.0, 51.1]
             },
-        }]
+                },
+        {
+            "name": "PAZNAŃ",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [16.9, 52.4]
+            },
+                    },
+        {
+            "name": "SZCZECIN",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [14.5, 53.4]
+            },
+                    },
+        {
+            "name": "PAZNAŃ",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [16.9, 52.4]
+            },
+                    },
+        {
+            "name": "KRAKÓW",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [19.9, 50.0]
+            },
+                    }, ]
 })
