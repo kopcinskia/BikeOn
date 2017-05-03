@@ -1,6 +1,5 @@
  google.maps.event.addDomListener(window, 'load', initAutocomplete)
 
- let map
 
  //initialize Map
  function initAutocomplete() {
@@ -10,7 +9,83 @@
      }
      let map = new google.maps.Map(document.getElementById('map'), {
          center: origin,
-         zoom: 6
+         zoom: 6,
+         styles: [{
+                 featureType: "administrative",
+                 elementType: "all",
+                 stylers: [{
+                         visibility: "on"
+                            },
+                     {
+                         lightness: 33
+                            }
+                        ]
+                    },
+             {
+                 featureType: "landscape",
+                 elementType: "all",
+                 stylers: [{
+                     color: "#f2e5d4"
+                        }]
+                    },
+             {
+                 featureType: "poi.park",
+                 elementType: "geometry",
+                 stylers: [{
+                     color: "#c5dac6"
+                        }]
+                    },
+             {
+                 featureType: "poi.park",
+                 elementType: "labels",
+                 stylers: [{
+                         visibility: "on"
+                            },
+                     {
+                         lightness: 20
+                            }
+                        ]
+                    },
+             {
+                 featureType: "road",
+                 elementType: "all",
+                 stylers: [{
+                     lightness: 20
+                        }]
+                    },
+             {
+                 featureType: "road.highway",
+                 elementType: "geometry",
+                 stylers: [{
+                     color: "#c5c6c6"
+                        }]
+                    },
+             {
+                 featureType: "road.arterial",
+                 elementType: "geometry",
+                 stylers: [{
+                     color: "#e4d7c6"
+                        }]
+                    },
+             {
+                 featureType: "road.local",
+                 elementType: "geometry",
+                 stylers: [{
+                     color: "#fbfaf7"
+                        }]
+                    },
+             {
+                 featureType: "water",
+                 elementType: "all",
+                 stylers: [{
+                         visibility: "on"
+                            },
+                     {
+                         color: "#acbcc9"
+                            }
+                        ]
+                    }
+                ]
      });
      let clickHandler = new ClickEventHandler(map, origin);
      //GEOLOCATION
@@ -115,12 +190,10 @@
      $('#trafficDisplay').click(function () {
          trafficLayer.setMap(map)
          bikeLayer.setMap(null)
-     })
-     $('#bikeDisplay').click(function () {
+     }), $('#bikeDisplay').click(function () {
          trafficLayer.setMap(null)
          bikeLayer.setMap(map)
-     })
-     $('#add').click(function () {
+     }), $('#add').click(function () {
 
 
          google.maps.event.addListener(map, 'click', function (event) {
@@ -128,8 +201,7 @@
          })
 
 
-     })
-     $('#save').click(function () {
+     }), $('#save').click(function () {
 
      })
      //LOAD JSON
