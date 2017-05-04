@@ -38,11 +38,27 @@
     margin-right: 12px;
 }
 
+
+/*KLASA DO check box-a!!!*/
+
+.pac-container {
+    background-color: aqua;
+    z-index: 1500;
+}
+
+
+/*OBRAZKI W TLE SELECTA*/
+
+#iconType option[value="ninja"] {
+    background-image: url(../img/ninja.png);
+}
+
+
+}
 .pac-controls {
     display: inline-block;
     padding: 5px 11px;
 }
-
 .pac-controls label {
     background-color: aqua;
     font-family: Roboto;
@@ -50,15 +66,11 @@
     font-weight: 300;
 }
 
-
 /*Nowa trasa --> Miejsce docelowe*/
-
 #pac-input {}
-
 #pac-input:focus {
     border-color: #4d90fe;
 }
-
 #title {
     color: #fff;
     background-color: #4d90fe;
@@ -66,7 +78,6 @@
     font-weight: 500;
     padding: 6px 12px;
 }
-
 #target {
     width: 345px;
 }

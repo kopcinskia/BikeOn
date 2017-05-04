@@ -46,19 +46,17 @@
             <div class="footer-container">
                 <div id="infoBlock">
                     <div id="infoLeft">
-                        <div id="search">
-                            <input id="startPlace" class="controls" type="text" placeholder="Miejsce Startowe">
-                            <input id="pac-input" class="controls" type="text" placeholder="Miejsce Docelowe">
-                            <button id="show road">Pokaż Trasę</button>
+                        <div class="infoDistance">
+                            <div class="infoContainer">
+                                <p>56 km</p>
+                                <p>dystans</p>
+                            </div>
                         </div>
 
+
+
                     </div>
-                    <div class="infoDistance">
-                        <div class="infoContainer">
-                            <p>56 km</p>
-                            <p>dystans</p>
-                        </div>
-                    </div>
+
                     <div id="infoRight">
                         <div class="infoTime">
                             <div class="infoContainer">
@@ -84,6 +82,20 @@
             <div data-role="header" data-theme="a">
                 <h1>Nowa Trasa</h1>
             </div>
+            <div id="search">
+
+                <textarea id="markerName"></textarea>
+                <select id="iconType">
+                    <option>ninja</option>
+                    <option>ninjaa</option>
+                    <option>ninja</option>
+                    <option>ninjaa</option>
+                
+                </select>
+
+                <input id="pac-input" class="controls" type="text" placeholder="Szukajka">
+
+            </div>
             <div role="main" class="ui-content">
 
             </div>
@@ -105,13 +117,7 @@
                 <button id="trafficDisplay">Trafic</button>
                 <button id="bikeDisplay">Bikeee</button>
                 <div id="addMarker">
-                    <textarea id="markerName"></textarea>
-                    <select id="iconType">
-                <option value="img/ninja.png">ninja</option>
-                <option value="img/samurai.png">samurai</option>
-                <option value="img/pin.png">pin</option>
-            </select>
-                    <button id="add">Add Marker</button>
+
                     <button id="save">save your Markers</button>
                     <a href="index.html">Delate U Markers </a>
                 </div>
