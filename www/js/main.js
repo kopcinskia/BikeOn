@@ -7,11 +7,14 @@ let map,
         lat: 53,
         lng: 15
     },
-    clickHAndler
+    clickHAndler,
+    pos
 
 var markers = [];
 //initialize Map
 function initMap() {
+
+
     //MAP
     map = new google.maps.Map(document.getElementById('map'), {
         center: origin,
@@ -63,7 +66,7 @@ function initMap() {
                 featureType: "road.highway",
                 elementType: "geometry",
                 stylers: [{
-                    color: "#c5c6c6"
+                    color: "#c6c5c5"
                         }]
                     },
             {
@@ -74,10 +77,12 @@ function initMap() {
                         }]
                     },
             {
+
+                //DROGI ROWEROWE
                 featureType: "road.local",
                 elementType: "geometry",
                 stylers: [{
-                    color: "#fbfaf7"
+                    color: "#ff0000"
                         }]
                     },
             {
@@ -95,12 +100,11 @@ function initMap() {
     });
 
     //GEOLOCATION
-
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             //search position
-            var pos = {
+            pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
@@ -177,38 +181,24 @@ function initMap() {
         });
         map.fitBounds(bounds);
     });
-    //Main marker
-    //     let marker = new google.maps.Marker({
-    //         position: hire,
-    //         map: map,
-    //         title: 'jestem tutaj',
-    //         icon: 'img/pin.png',
-    //         animation: google.maps.Animation.BOUNCE,
-    //         draggable: true
-    //     });
-
-
-    //Buttons
-    let trafficLayer = new google.maps.TrafficLayer()
-    let bikeLayer = new google.maps.BicyclingLayer()
+    //DRAW ROAD
+    var clickHandler = new ClickEventHandler(map, pos),
+        //BUTONS
+        trafficLayer = new google.maps.TrafficLayer(),
+        bikeLayer = new google.maps.BicyclingLayer()
 
     $('#trafficDisplay').click(function () {
-        trafficLayer.setMap(map)
-        bikeLayer.setMap(null)
-    }), $('#bikeDisplay').click(function () {
-        trafficLayer.setMap(null)
-        bikeLayer.setMap(map)
-    }), $('#add').click(function () {
-
-
-        google.maps.event.addListener(map, 'click', function (event) {
-            addMarker(event.latLng, map);
+            trafficLayer.setMap(map)
+            bikeLayer.setMap(null)
+        }),
+        $('#bikeDisplay').click(function () {
+            trafficLayer.setMap(null)
+            bikeLayer.setMap(map)
+        }),
+        $('#MapDisplay').click(function () {
+            trafficLayer.setMap(null)
+            bikeLayer.setMap(null)
         })
-
-
-    }), $('#save').click(function () {
-
-    })
     //LOAD JSON
     let script = document.createElement('script');
     script.src = 'http://192.168.0.102:8080/BikeOn_FrontEnd/js/JSON/marker.json'
@@ -229,4 +219,73 @@ function initMap() {
             });
         }
     }
+
+
 }
+
+
+var ClickEventHandler = function (map, pos) {
+    this.origin = pos;
+    this.map = map;
+    this.directionsService = new google.maps.DirectionsService;
+    this.directionsDisplay = new google.maps.DirectionsRenderer;
+    this.directionsDisplay.setMap(map);
+    this.placesService = new google.maps.places.PlacesService(map);
+    this.infowindow = new google.maps.InfoWindow;
+    this.infowindowContent = document.getElementById('infowindow-content');
+    this.infowindow.setContent(this.infowindowContent);
+
+    // Listen for clicks on the map.
+    this.map.addListener('click', this.handleClick.bind(this));
+};
+
+ClickEventHandler.prototype.handleClick = function (event) {
+    console.log('You clicked on: ' + event.latLng);
+    // If the event has a placeId, use it.
+    if (event.placeId) {
+        console.log('You clicked on place:' + event.placeId);
+
+        // Calling e.stop() on the event prevents the default info window from
+        // showing.
+        // If you call stop here when there is no placeId you will prevent some
+        // other map click event handlers from receiving the event.
+        event.stop();
+        this.calculateAndDisplayRoute(event.placeId);
+        this.getPlaceInformation(event.placeId);
+    }
+};
+
+ClickEventHandler.prototype.calculateAndDisplayRoute = function (placeId) {
+    var me = this;
+    this.directionsService.route({
+        origin: this.origin,
+        destination: {
+            placeId: placeId
+        },
+        travelMode: 'WALKING'
+    }, function (response, status) {
+        if (status === 'OK') {
+            me.directionsDisplay.setDirections(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
+};
+
+ClickEventHandler.prototype.getPlaceInformation = function (placeId) {
+    var me = this;
+    this.placesService.getDetails({
+        placeId: placeId
+    }, function (place, status) {
+        if (status === 'OK') {
+            me.infowindow.close();
+            me.infowindow.setPosition(place.geometry.location);
+            me.infowindowContent.children['place-icon'].src = place.icon;
+            me.infowindowContent.children['place-name'].textContent = place.name;
+            me.infowindowContent.children['place-id'].textContent = place.place_id;
+            me.infowindowContent.children['place-address'].textContent =
+                place.formatted_address;
+            me.infowindow.open(me.map);
+        }
+    });
+};
