@@ -44,62 +44,46 @@
         <!--        FOOTER         -->
         <div data-role="footer" data-position="fixed" data-theme="footer-element">
             <div class="footer-container">
-                <div id="infoBlock">
-                    <div id="infoLeft">
-                        <div class="infoDistance">
-                            <div class="infoContainer">
-                                <p>56 km</p>
-                                <p>dystans</p>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-                    <div id="infoRight">
-                        <div class="infoTime">
-                            <div class="infoContainer">
-                                <p>1h 20m</p>
-                                <p>czas</p>
-                            </div>
-                        </div>
-                        <div class="infoSpeed">
-                            <div class="infoContainer">
-                                <p>36 km/h</p>
-                                <p>średnia prędkość</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <a href="#popupNewRoad" data-rel="popup" data-transition="pop" data-role="none"><button class="newRoute" data-role="none">Nowa Trasa</button></a>
             </div>
         </div>
         <!--          HIDE PANELS            -->
 
         <!--      Some popup Display     -->
-        <div data-role="popup" id="popupNewRoad" data-overlay-theme="b" data-theme="b" data-dismissible="false">
-            <div data-role="header" data-theme="a">
+        <div data-role="popup" id="popupNewRoad" data-overlay-theme="b" data-position-to="window" data-theme="b" data-dismissible="false">
+            <div data-role="header" data-theme="popupHeader">
                 <h1>Nowa Trasa</h1>
             </div>
             <div id="search">
-
-                <textarea id="markerName"></textarea>
-                <select id="iconType">
-                   <option value="img/star.png">Star Icon</option>
-                <option value="img/heart.png">Heart Inon</option>
-                <option value="img/pin.png">pin</option>
-                
-                </select>
-
-                <input id="pac-input" class="controls" type="text" placeholder="Szukajka">
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
-
+                <input id="pac-input" class="controls" type="text" placeholder="Cel podróży:">
+                <textarea id="markerName" placeholder="Nazwa punktu:"></textarea>
+                <div data-role="navbar" id="iconType">
+                    <ul>
+                        <li>
+                            <a href="#" class="ui-btn-active"><img src="img/heart.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/heart.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/heart.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/heart.png"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--ZADANIE DOMOWE - znaczniki, szukajka google map, dokończyć popup, drogi rowerowe: kolor, panele boczne -->
+                <div id="newtrackButtons">
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Start</a>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Anuluj</a>
+                </div>
             </div>
-            <div role="main" class="ui-content">
-
-            </div>
+            
         </div>
+        <div role="main" class="ui-content">
+
+            </div>
         <!--       LEFT SIDE         -->
         <div data-role="panel" id="menuPanel" data-display="overlay" data-position="left">
             <ul>
@@ -116,15 +100,13 @@
             <div id="side">
                 <button id="trafficDisplay">Trafic</button>
                 <button id="bikeDisplay">Bikeee</button>
-                <button id="MapDisplay">Clear</button>
+                <div id="addMarker">
 
-
-
-                <button id="save">save your Markers</button>
-                <a href="index.html">Delate U Markers </a>
+                    <button id="save">save your Markers</button>
+                    <a href="index.html">Delate U Markers </a>
+                </div>
             </div>
         </div>
-    </div>
 
     </div>
     <!--     Google MAP API     -->

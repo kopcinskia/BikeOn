@@ -42,7 +42,7 @@
 /*KLASA DO check box-a!!!*/
 
 .pac-container {
-    background-color: aqua;
+    background-color: #FCF7EE;
     z-index: 1500;
 }
 
@@ -60,7 +60,7 @@
     padding: 5px 11px;
 }
 .pac-controls label {
-    background-color: aqua;
+    background-color: #FCF7EE;
     font-family: Roboto;
     font-size: 13px;
     font-weight: 300;
@@ -69,11 +69,11 @@
 /*Nowa trasa --> Miejsce docelowe*/
 #pac-input {}
 #pac-input:focus {
-    border-color: #4d90fe;
+    border-color: #FCF7EE;
 }
 #title {
     color: #fff;
-    background-color: #4d90fe;
+    background-color: #FCF7EE;
     font-size: 25px;
     font-weight: 500;
     padding: 6px 12px;
