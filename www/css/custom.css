@@ -4,6 +4,10 @@
 
         dodaj swoje style aby dodatko wkomponować je w naszą aplikację */
 
+#flex {
+    position: fixed;
+}
+
 #description {
     font-family: Roboto;
     font-size: 15px;
