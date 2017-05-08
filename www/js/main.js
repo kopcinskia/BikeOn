@@ -3,21 +3,27 @@ google.maps.event.addDomListener(window, 'load', initMap)
 
 //GLOBAL VARIABLE
 let map,
-    origin = {
+    clickHAndler,
+    pos,
+    test = {
         lat: 53,
         lng: 15
-    },
-    clickHAndler,
-    pos
+    }
 
 var markers = [];
+
+var directionsDisplay = new google.maps.DirectionsRenderer;
+var directionsService = new google.maps.DirectionsService;
 //initialize Map
 function initMap() {
 
 
     //MAP
     map = new google.maps.Map(document.getElementById('map'), {
-        center: origin,
+        center: {
+            lat: 53,
+            lng: 15
+        },
         zoom: 6,
         styles: [{
                 featureType: "administrative",
@@ -121,7 +127,7 @@ function initMap() {
                 });
             //function on click matker
             positionMarker.addListener('click', function () {
-                infowindow.open(map, positionMarker);
+                infowindow.open(map, positionMarker)
             });
 
         }, function () {
@@ -178,12 +184,46 @@ function initMap() {
             } else {
                 bounds.extend(place.geometry.location);
             }
+
         });
+
         map.fitBounds(bounds);
     });
     //DRAW ROAD
-    var clickHandler = new ClickEventHandler(map, pos),
-        //BUTONS
+
+
+    directionsDisplay.setMap(map);
+    //W tym elemęci wyswetlamy przebieg trasy
+    directionsDisplay.setPanel(document.getElementById('legendPanel'));
+
+    var onChangeHandler = function () {
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+    };
+    document.getElementById('start').addEventListener('click', onChangeHandler);
+
+
+
+
+
+    function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        var start = pos
+        var end = markers[0].position
+        directionsService.route({
+            origin: start,
+            destination: end,
+            travelMode: 'BICYCLING'
+        }, function (response, status) {
+            if (status === 'OK') {
+                directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+    }
+
+
+    //BUTONS
+    let
         trafficLayer = new google.maps.TrafficLayer(),
         bikeLayer = new google.maps.BicyclingLayer()
 
@@ -219,73 +259,4 @@ function initMap() {
             });
         }
     }
-
-
 }
-
-
-var ClickEventHandler = function (map, pos) {
-    this.origin = pos;
-    this.map = map;
-    this.directionsService = new google.maps.DirectionsService;
-    this.directionsDisplay = new google.maps.DirectionsRenderer;
-    this.directionsDisplay.setMap(map);
-    this.placesService = new google.maps.places.PlacesService(map);
-    this.infowindow = new google.maps.InfoWindow;
-    this.infowindowContent = document.getElementById('infowindow-content');
-    this.infowindow.setContent(this.infowindowContent);
-
-    // Listen for clicks on the map.
-    this.map.addListener('click', this.handleClick.bind(this));
-};
-
-ClickEventHandler.prototype.handleClick = function (event) {
-    console.log('You clicked on: ' + event.latLng);
-    // If the event has a placeId, use it.
-    if (event.placeId) {
-        console.log('You clicked on place:' + event.placeId);
-
-        // Calling e.stop() on the event prevents the default info window from
-        // showing.
-        // If you call stop here when there is no placeId you will prevent some
-        // other map click event handlers from receiving the event.
-        event.stop();
-        this.calculateAndDisplayRoute(event.placeId);
-        this.getPlaceInformation(event.placeId);
-    }
-};
-
-ClickEventHandler.prototype.calculateAndDisplayRoute = function (placeId) {
-    var me = this;
-    this.directionsService.route({
-        origin: this.origin,
-        destination: {
-            placeId: placeId
-        },
-        travelMode: 'WALKING'
-    }, function (response, status) {
-        if (status === 'OK') {
-            me.directionsDisplay.setDirections(response);
-        } else {
-            window.alert('Directions request failed due to ' + status);
-        }
-    });
-};
-
-ClickEventHandler.prototype.getPlaceInformation = function (placeId) {
-    var me = this;
-    this.placesService.getDetails({
-        placeId: placeId
-    }, function (place, status) {
-        if (status === 'OK') {
-            me.infowindow.close();
-            me.infowindow.setPosition(place.geometry.location);
-            me.infowindowContent.children['place-icon'].src = place.icon;
-            me.infowindowContent.children['place-name'].textContent = place.name;
-            me.infowindowContent.children['place-id'].textContent = place.place_id;
-            me.infowindowContent.children['place-address'].textContent =
-                place.formatted_address;
-            me.infowindow.open(me.map);
-        }
-    });
-};
