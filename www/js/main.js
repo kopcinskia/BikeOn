@@ -24,7 +24,7 @@ function initMap() {
             lat: 53,
             lng: 15
         },
-        zoom: 6,
+        zoom: 16,
         styles: [{
                 featureType: "administrative",
                 elementType: "all",
@@ -243,16 +243,16 @@ function initMap() {
         })
     //LOAD JSON
     let script = document.createElement('script');
-    script.src = 'http://192.168.0.102:8080/BikeOn_FrontEnd/js/JSON/marker.json'
+    script.src = 'http://192.168.2.91:8080/JAzda/BikeOn/www/js/JSON/bikeStation.json'
     document.getElementsByTagName('head')[0].appendChild(script);
 
     //JSON display
     window.eqfeed_callback = function (results) {
         for (var i = 0; i < results.favourite.length; i++) {
-            let coords = results.favourite[i].geometry.coordinates
             let title = results.favourite[i].name
             let icon = results.favourite[i].iconType
-            let latLng = new google.maps.LatLng(coords[1], coords[0])
+            let coords = results.favourite[i].geometry.coordinates
+            let latLng = new google.maps.LatLng(coords[0], coords[1])
             let marker = new google.maps.Marker({
                 icon: icon,
                 position: latLng,
