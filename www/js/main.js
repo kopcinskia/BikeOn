@@ -11,6 +11,7 @@ let map,
     }
 
 var markers = [];
+var marker = []
 
 var directionsDisplay = new google.maps.DirectionsRenderer;
 var directionsService = new google.maps.DirectionsService;
@@ -24,7 +25,7 @@ function initMap() {
             lat: 53,
             lng: 15
         },
-        zoom: 16,
+        zoom: 13,
         styles: [{
                 featureType: "administrative",
                 elementType: "all",
@@ -88,7 +89,7 @@ function initMap() {
                 featureType: "road.local",
                 elementType: "geometry",
                 stylers: [{
-                    color: "#ff0000"
+                    color: "#cdc7b8"
                         }]
                     },
             {
@@ -172,7 +173,7 @@ function initMap() {
             //push marker on ARR
             let selectIcon = document.querySelector('#iconType')
 
-            markers.push(new google.maps.Marker({
+            marker.push(new google.maps.Marker({
                 icon: selectIcon.value,
                 map: map,
                 title: place.name,
@@ -207,7 +208,7 @@ function initMap() {
 
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         var start = pos
-        var end = markers[0].position
+        var end = marker[0].position
         directionsService.route({
             origin: start,
             destination: end,
@@ -219,8 +220,8 @@ function initMap() {
                 window.alert('Directions request failed due to ' + status);
             }
         });
-        var d = document.getElementById('map');
-        d.style.position = "fixed";
+        var fixedMap = document.getElementById('map');
+        fixedMap.style.position = "fixed";
     }
 
 
@@ -259,6 +260,30 @@ function initMap() {
                 map: map,
                 title: title
             });
+            markers.push(marker);
         }
     }
+
+    // Sets the map on all markers in the array.
+    function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+        }
+    }
+
+
+    var buttonShow = document.getElementById('show');
+    var buttonHide = document.getElementById('hide');
+    $('#show').click(function () {
+        setMapOnAll(map);
+        buttonShow.style.display = "none"
+        buttonHide.style.display = "block"
+
+    })
+    $('#hide').click(function () {
+        setMapOnAll(null);
+        buttonShow.style.display = "block"
+        buttonHide.style.display = "none"
+    })
+    buttonShow.style.display = "none"
 }
