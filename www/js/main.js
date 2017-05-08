@@ -219,6 +219,8 @@ function initMap() {
                 window.alert('Directions request failed due to ' + status);
             }
         });
+        var d = document.getElementById('map');
+        d.style.position = "fixed";
     }
 
 

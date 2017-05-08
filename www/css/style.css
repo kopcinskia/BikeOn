@@ -117,7 +117,7 @@ li {
 
 /* --- FOOTER --- */
 
-ui-btn.ui-btn-active{
+ui-btn.ui-btn-active {
     background-color: red;
 }
 
@@ -125,64 +125,70 @@ ui-btn.ui-btn-active{
     color: #343B47;
     font-family: 'Lato', sans-serif;
 }
-:-moz-placeholder { 
-    color: #343B47;
-    font-family: 'Lato', sans-serif;
-}
-::-moz-placeholder { 
-    color: #343B47;
-    font-family: 'Lato', sans-serif;
-}
-:-ms-input-placeholder { 
+
+:-moz-placeholder {
     color: #343B47;
     font-family: 'Lato', sans-serif;
 }
 
-#iconType{
+::-moz-placeholder {
+    color: #343B47;
+    font-family: 'Lato', sans-serif;
+}
+
+:-ms-input-placeholder {
+    color: #343B47;
+    font-family: 'Lato', sans-serif;
+}
+
+#iconType {
     display: flex;
     justify-content: space-around;
 }
 
-input:focus::-webkit-input-placeholder { 
+input:focus::-webkit-input-placeholder {
     color: #FCF7EE;
     text-shadow: none;
 }
-input:focus:-moz-placeholder { 
-    color: #FCF7EE;
-    text-shadow: none;
-} 
-input:focus::-moz-placeholder { 
-    color: #FCF7EE;
-    text-shadow: none;
-} 
-input:focus:-ms-input-placeholder { 
-    color: #FCF7EE;
-    text-shadow: none;
-} 
 
-#search{
+input:focus:-moz-placeholder {
+    color: #FCF7EE;
+    text-shadow: none;
+}
+
+input:focus::-moz-placeholder {
+    color: #FCF7EE;
+    text-shadow: none;
+}
+
+input:focus:-ms-input-placeholder {
+    color: #FCF7EE;
+    text-shadow: none;
+}
+
+#search {
     padding: 10px;
 }
 
-#newtrackButtons{
+#newtrackButtons {
     display: flex;
     justify-content: space-between;
 }
 
-#newtrackButtons a{
+#newtrackButtons a {
     background-color: #343B47;
     border-color: #343B47;
     width: 40%;
 }
 
-#newtrackButtons a:nth-child(2){
+#newtrackButtons a:nth-child(2) {
     background-color: #e45757;
     border-color: #e45757;
     margin-right: 0;
 }
 
 #newtrackButtons a,
-#newtrackButtons a:nth-child(2){
+#newtrackButtons a:nth-child(2) {
     border-radius: 4px;
     box-shadow: none;
     font-family: 'Lato', sans-serif;
@@ -190,9 +196,9 @@ input:focus:-ms-input-placeholder {
     text-shadow: none;
 }
 
-#pac-input, #markerName{
+#pac-input,
+#markerName {
     background-color: #FCF7EE;
- 
     border: none;
     box-shadow: none;
     color: #464B61;
