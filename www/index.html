@@ -56,27 +56,27 @@
                 <h1>Nowa Trasa</h1>
             </div>
             <div id="search">
-                <input id="pac-input" class="controls" type="text" placeholder="Cel podróży:">
-                <textarea id="markerName" placeholder="Nazwa punktu:"></textarea>
-                <div data-role="navbar" id="iconType">
-                    <ul>
+                <div data-role="navbar" id="iconType" >
+                    <ul data-theme="header-element">
                         <li>
-                            <a href="#" class="ui-btn-active"><img src="img/heart.png"></a>
+                            <a href="#" class="ui-btn-active iconBox"><img src="img/heart.png"></a>
                         </li>
                         <li>
-                            <a href="#"><img src="img/heart.png"></a>
+                            <a href="#" class="iconBox"><img src="img/heart.png" data-theme="active-buttons"></a>
                         </li>
                         <li>
-                            <a href="#"><img src="img/heart.png"></a>
+                            <a href="#" class="iconBox"><img src="img/heart.png"></a>
                         </li>
                         <li>
-                            <a href="#"><img src="img/heart.png"></a>
+                            <a href="#" class="iconBox"><img src="img/heart.png"></a>
                         </li>
                     </ul>
                 </div>
+                <input id="pac-input" class="controls" type="text" placeholder="Cel podróży:">
+                <textarea id="markerName" placeholder="Nazwa punktu:"></textarea>
                 <!--ZADANIE DOMOWE - znaczniki, szukajka google map, dokończyć popup, drogi rowerowe: kolor, panele boczne -->
                 <div id="newtrackButtons">
-                    <a href="#legendPanel" id="start" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Start</a>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Start</a>
                     <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Anuluj</a>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                 <li><img class="svg-icons" src="svg/challenge.svg" alt="challenge_icon">Wyzwanie</li>
                 <li><img class="svg-icons" src="svg/settings.svg" alt="settings_icon">Ustawienia</li>
             </ul>
-            <button data-role="none">Wyloguj</button>
+            <button data-role="none" class="logout">Wyloguj</button>
         </div>
         <!--         RIGHT SIDE         -->
         <div data-role="panel" id="legendPanel" data-display="overlay" data-position="right">
