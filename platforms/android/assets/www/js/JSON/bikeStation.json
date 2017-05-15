@@ -1,0 +1,557 @@
+eqfeed_callback({
+
+    "favourite": [{
+
+            "name": "Wavelo - AGH Czysta",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0639082, 19.924320800000032]
+            }
+    },
+        {
+            "name": "Wavelo - Azory",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0863913999999, 19.908928699999933]
+            },
+    },
+        {
+            "name": "Wavelo - AWF",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0737453, 19.998846400000048]
+            },
+    },
+        {
+            "name": "Wavelo - Borek Fałęcki",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.011791, 19.927173100000005]
+            },
+    },
+        {
+            "name": "Wavelo - Borsucza",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0305134, 19.92874359999996]
+            },
+    },
+        {
+            "name": "Wavelo - Bronowice Małe",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0820715, 19.88279990000001]
+            },
+    },
+        {
+            "name": "Wavelo - Balicka Wiadukt",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0814428, 19.888680199999953]
+            },
+    },
+        {
+            "name": "Wavelo - Bronowice",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0774841, 19.90111569999999]
+            },
+    },
+        {
+            "name": "Wavelo - Centrum Kongresowe ICE",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0487777, 19.93120410000006, ]
+            },
+    },
+        {
+            "name": "Wavelo - Czerwone Maki",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0175377, 19.88982029999999]
+            },
+    },
+        {
+            "name": "Wavelo - Chmieleniec",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0201715, 19.89824320000002]
+            },
+    },
+        {
+            "name": "Wavelo - Cichy Kącik",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0630894, 19.90288320000002]
+            },
+    },
+        {
+            "name": "Wavelo - Cmentarz Podgórski-UMK",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0381966, 19.965693099999953]
+            },
+    },
+        {
+            "name": "Wavelo - Dworzec Główny Wschód",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0687446, 19.949646400000006]
+            },
+    },
+        {
+            "name": "Wavelo Dauna",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0189703, 19.977777999999944]
+            },
+    },
+        {
+            "name": "Wavelo - Dunikowskiego",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0905766, 20.016715699999963]
+            },
+    },
+        {
+            "name": "Wavelo - DH Wanda",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0843396, 20.019731800000045]
+            },
+    },
+        {
+            "name": "Wavelo - Dworcowa",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0332655, 19.97056109999994]
+            },
+    },
+        {
+            "name": "Wavelo - Bratysławska",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0843154, 19.933361900000023]
+            },
+    },
+        {
+            "name": "Wavelo - Rondo Mogilskie",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0657013, 19.95925280000006]
+            },
+    },
+        {
+            "name": "Wavelo - Plac Wolnica",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0484081, 19.943563799999993]
+            },
+    },
+        {
+            "name": "Wavelo - Fabryka Schindlera",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0472435, 19.961119499999995]
+            },
+    },
+        {
+            "name": "Wavelo - Francesco Nullo",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0602589, 19.967418400000042]
+            },
+    },
+        {
+            "name": "Wavelo - Grota-Roweckiego",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0316075, 19.917029400000047]
+            },
+    },
+        {
+            "name": "Wavelo - Grunwaldzka - UMK",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0673716, 19.965276099999983]
+            },
+    },
+        {
+            "name": "Wavelo - Garbarska",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0658465, 19.935509799999977]
+            },
+    },
+        {
+            "name": "Wavelo - Galicyjska",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0635641, 20.007146799999987]
+            },
+    },
+        {
+            "name": "Wavelo - Rondo Mogilskie",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0657013, 19.95925280000006]
+            },
+    },
+        {
+            "name": "Wavelo - Hala Targowa",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0588984, 19.948429900000065]
+            },
+    },
+        {
+            "name": "Wavelo - Jubilat",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0555165, 19.927640800000063]
+            },
+    },
+        {
+            "name": "Wavelo - Krowodrza Górka",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0885091, 19.93175359999998]
+            },
+    },
+        {
+            "name": "Wavelo - Łagiewniki",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0295447, 19.93640759999994]
+            },
+    },
+        {
+            "name": "Wavelo - Ludwinów",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0434567999999, 19.93467910000004]
+            },
+    },
+        {
+            "name": "Wavelo - Łobzowska",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [, 50.0676024, 19.933913899999993]
+            },
+    },
+        {
+            "name": "Wavelo - Łokietka",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0854286999999, 19.923181999999997]
+            },
+    },
+        {
+            "name": "Wavelo - Łobzów PKP",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0815088, 19.91599199999996],
+            },
+    },
+        {
+            "name": "Wavelo - Miłkowskiego",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0287714, 19.917809900000066]
+            },
+    },
+        {
+            "name": "Wavelo - Mazowiecka",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0784473999999, 19.918159800000012]
+            },
+    },
+        {
+            "name": "Wavelo - Most Grunwaldzki",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0498996, 19.935848599999986]
+            },
+    },
+        {
+            "name": "Wavelo - Miodowa",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0535558999999, 19.94774540000003]
+            },
+    },
+        {
+            "name": "Wavelo - Mackiewicza",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0900537, 19.944314599999984]
+            },
+    },
+        {
+            "name": "Wavelo - Norymberska",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0285788999999, 19.912036599999965]
+            },
+    },
+        {
+            "name": "Wavelo - Nowy Kleparz",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0736846999999, 19.935849800000028]
+            },
+    },
+        {
+            "name": "Wavelo - Narxymskiego II",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0734222, 19.96592480000004]
+            },
+    },
+        {
+            "name": "Wavelo - Nowosądecka",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0143277, 19.966003099999966]
+            },
+    },
+        {
+            "name": "Wavelo - Smoleńsk",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0591335999999, 19.932217300000048]
+            },
+    },
+        {
+            "name": "Wavelo - Krowodrza Górka",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0885091, 19.93175359999998]
+            },
+    },
+        {
+            "name": "Wavelo - Ofiar Dąbia",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.059776, 19.975942600000053]
+            },
+    },
+        {
+            "name": "Wavelo - Olszecka",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0883312, 19.967478099999994]
+            },
+    },
+        {
+            "name": "Wavelo - Okulickiego",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0872508, 19.99540049999996]
+            },
+    },
+        {
+            "name": "Wavelo - Osiedle Złotego Wieku",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0937358, 20.005146999999965]
+            },
+    },
+        {
+            "name": "Wavelo - Osiedle Piastów",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.1016995, 20.01286319999997]
+            },
+    },
+        {
+            "name": "Wavelo - Poczta Główna",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0592956, 19.942555699999957]
+            },
+    },
+        {
+            "name": "Wavelo - Ruczaj",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0264642, 19.905555899999968]
+            },
+    },
+        {
+            "name": "Wavelo - Reymonta-Kapitol",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0667426, 19.90642360000004]
+            },
+    },
+        {
+            "name": "Wavelo - Racławicka",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0791566, 19.920960000000036]
+            },
+    },
+        {
+            "name": "Wavelo - Reymonta",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0656194, 19.914086699999984]
+            },
+    },
+        {
+            "name": "Wavelo - Rynek Dębnicki",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0513865, 19.92677709999998]
+            },
+    },
+        {
+            "name": "Wavelo - Szwedzka",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0468124000001, 19.924871499999995]
+            },
+    },
+        {
+            "name": "Wavelo - Salwator",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0531795, 19.91689240000005]
+            },
+    },
+        {
+            "name": "Wavelo - Stradom II",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0512362000001, 19.94129040000007]
+            },
+    },
+        {
+            "name": "Wavelo - Św. Wawrzyńca",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0502159, 19.952366600000005]
+            },
+    },
+        {
+            "name": "Wavelo - Starowiślna",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0572794, 19.94572100000005]
+            },
+    },
+        {
+            "name": "Wavelo - Teatr Bagatela I",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0632615, 19.93329700000004]
+            },
+    },
+        {
+            "name": "Wavelo - Teligi",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.016368, 20.008758299999954]
+            },
+    },
+        {
+            "name": "Wavelo - Turniejowa",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0083117999999, 19.95966629999998]
+            },
+    },
+        {
+            "name": "Wavelo - Uniwersytet Pedagogiczny",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0744225, 19.90980209999998]
+            },
+    },
+        {
+            "name": "Wavelo - Urzędnicza",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0719672, 19.919544900000005]
+            },
+    },
+        {
+            "name": "Wavelo - Ugorek",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0756287, 19.979974900000002]
+            },
+    },
+        {
+            "name": "Wavelo - Wawel",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0540106, 19.938843099999985]
+            },
+    },
+        {
+            "name": "Wavelo - Wesele",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0792599, 19.897261500000013]
+            },
+    },
+        {
+            "name": "Wavelo - Wrocławska",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0759561, 19.928787100000022]
+            },
+    },
+        {
+            "name": "Wavelo - Wieczysta",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.07104, 19.98441260000004]
+            },
+    },
+        {
+            "name": "Wavelo - Wlotowa",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0200141999999, 19.987546599999973]
+            },
+    },
+        {
+            "name": "Wavelo - Zachodnia",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0241686, 19.91093509999996]
+            },
+    },
+        {
+            "name": "Wavelo - Zielińskiego",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0465627, 19.910468100000003]
+            },
+    },
+        {
+            "name": "Wavelo - Zabłocie",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0497514, 19.964135199999987]
+            },
+    },
+        {
+            "name": "Wavelo - Zdrowa",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0884789, 19.938802399999986]
+            },
+    },
+        {
+            "name": "Wavelo - Zalew Nowohucki",
+            "iconType": "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
+            "geometry": {
+                "coordinates": [50.0799749, 20.049818800000025]
+            },
+       }, ]
+})

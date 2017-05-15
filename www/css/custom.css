@@ -37,23 +37,20 @@
     padding-bottom: 12px;
     margin-right: 12px;
 }
-
-
+/*Road*/
+.adp-summary{
+    color: white;
+    background-color: #e45757;
+}
+.adp-substep{
+    color: white;
+}
 /*KLASA DO check box-a!!!*/
 
 .pac-container {
     background-color: #FCF7EE;
     z-index: 1500;
 }
-
-
-/*OBRAZKI W TLE SELECTA*/
-
-#iconType option[value="ninja"] {
-    background-image: url(../img/ninja.png);
-}
-
-
 }
 .pac-controls {
     display: inline-block;

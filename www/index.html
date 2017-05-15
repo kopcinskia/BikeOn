@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -14,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <title>BikeOn!</title>
 </head>
-
 <body>
     <div data-role="page" id="pageone">
         <!--        HEADER         -->
@@ -27,17 +25,9 @@
                 <a href="#legendPanel"><img class="svg-map" src="svg/mappoint.svg" alt="map_icon"></a>
             </div>
         </div>
-
-
-
         <!--     MAIN     PANEL     -->
         <div data-role="main" id="pageoneMAP" class="ui-content content">
-
-
             <div id="map" data-position="fixed"></div>
-
-
-
         </div>
         <!--        FOOTER         -->
         <div data-role="footer" data-position="fixed" data-theme="footer-element">
@@ -45,8 +35,6 @@
                 <a href="#popupNewRoad" data-rel="popup" data-transition="pop" data-role="none"><button class="newRoute" data-role="none">Nowa Trasa</button></a>
             </div>
         </div>
-        <!--          HIDE PANELS            -->
-
         <!--      Some popup Display     -->
         <div data-role="popup" id="popupNewRoad" data-overlay-theme="b" data-position-to="window" data-theme="b" data-dismissible="false">
             <div data-role="header" data-theme="popupHeader">
@@ -54,24 +42,11 @@
             </div>
             <div id="search">
                 <input id="pac-input" class="controls" type="text" placeholder="Cel podróży:" data-role="none">
-                <!--<textarea id="markerName" placeholder="Nazwa punktu:"></textarea>-->
+
+   
                 <div data-role="navbar" id="iconType">
-                   <!--<ul>
-                        <li>
-                            <a href="#" class="ui-btn-active"><img src="img/point.png"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="img/like.png"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="img/special.png"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="img/love.png"></a>
-                        </li>
-                    </ul>
-                </div>-->
-                <!--ZADANIE DOMOWE - znaczniki, szukajka google map, dokończyć popup, drogi rowerowe: kolor, panele boczne -->
+             
+
                 <div id="newtrackButtons">
                     <a href="#legendPanel" id="start" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Start</a>
                     <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Anuluj</a>
@@ -80,21 +55,25 @@
 
         </div>
 
+
+        </div>
+
+
         <!--         RIGHT SIDE         -->
         <div data-role="panel" id="legendPanel" data-display="overlay" data-position="right">
-
-
             <div id="side">
                 <button id="trafficDisplay" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/traffic.svg" alt="traffic_icon">Korki</button>
                 <button id="bikeDisplay" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/route.svg" alt="route_icon">Trasy rowerowe</button>
                 <button id="MapDisplay" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/delete.svg" alt="delete_icon">Wyczyść mapę</button>
                 <div id="addMarker">
+
+                    
                     <button id="show" onclick="showMarkers()" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/challenge.svg" alt="challange_icon">Pokaż wavelo</button>
                     <button id="hide" onclick="clearMarkers()" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/challenge.svg" alt="challenge_icon">Ukryj wavelo</button>
+
                 </div>
             </div>
         </div>
-
     </div>
     <!--     Google MAP API     -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-_pwDzmgch72gqHA6iZ9tx3JxI7ZRxho&libraries=places">
@@ -105,5 +84,4 @@
     <!--    Context Application     -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
