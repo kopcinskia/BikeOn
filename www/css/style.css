@@ -15,7 +15,8 @@ body {
 /* --- HEADER / PANELS--- */
 
 .header {
-    padding: 0 3px;
+    padding: 15px 10px 0;
+    position: fixed !important;
 }
 
 .ui-bar-header-element {
@@ -25,19 +26,8 @@ body {
     z-index: 1000;
 }
 
-.menu-icon {
-    margin-top: 7px;
-}
-
-.marker-icon {
-    margin-top: 11px;
-}
-
-.svg-menu {
-    width: 29px;
-}
-
 .svg-map {
+    margin: 0 8px;
     width: 21px;
 }
 
@@ -46,19 +36,13 @@ body {
     width: 14px;
 }
 
-.svg-menu,
-.svg-map {
-    margin: 0 8px;
-}
-
-.menu-icon,
 .title,
 .marker-icon {
     display: table-cell;
 }
 
 .title {
-    margin-left: -2px;
+    margin-left: 2px;
     text-align: center;
     width: 100%;
 }
@@ -71,13 +55,8 @@ body {
     color: white;
     font-size: 16px;
     font-weight: 300;
-    margin-top: 12px;
+    margin-left: 25px;
     text-shadow: none;
-}
-
-#menuPanel li:nth-child(even){
-    border-bottom: solid 1px rgba(52, 59, 71, 0.70);
-    border-top: solid 1px rgba(52, 59, 71, 0.70)
 }
 
 /*DODAŁEM CI TE 2 KLASY pageone i map OStyluj je porządnie */
@@ -131,6 +110,29 @@ li {
     padding: 12px;
     text-align: center;
     text-decoration: none;
+}
+
+.RightButtons {
+    background-color: #464B61;
+    border: 0px;
+    border-bottom: 1px solid rgba(52, 59, 71, 0.84);
+    color: white;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 12px;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+}
+
+.RightButtons:last-child {
+    border-bottom: 0px;
+}
+
+#side{
+    line-height: 50px;
+    margin-top: 20px;
 }
 
 /* --- CONTENT --- */

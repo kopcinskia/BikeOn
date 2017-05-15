@@ -19,9 +19,6 @@
     <div data-role="page" id="pageone">
         <!--        HEADER         -->
         <div data-role="header" class="header" data-position="fixed" data-theme="header-element">
-            <div class="menu-icon">
-                <a href="#menuPanel"><img class="svg-menu" src="svg/menu.svg" alt="menu_icon"></a>
-            </div>
             <div class="title">
                 <h1>
                     <g>Bike</g>On!</h1>
@@ -59,7 +56,7 @@
                 <input id="pac-input" class="controls" type="text" placeholder="Cel podróży:" data-role="none">
                 <!--<textarea id="markerName" placeholder="Nazwa punktu:"></textarea>-->
                 <div data-role="navbar" id="iconType">
-                    <ul>
+                   <!--<ul>
                         <li>
                             <a href="#" class="ui-btn-active"><img src="img/point.png"></a>
                         </li>
@@ -73,7 +70,7 @@
                             <a href="#"><img src="img/love.png"></a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
                 <!--ZADANIE DOMOWE - znaczniki, szukajka google map, dokończyć popup, drogi rowerowe: kolor, panele boczne -->
                 <div id="newtrackButtons">
                     <a href="#legendPanel" id="start" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Start</a>
@@ -83,30 +80,17 @@
 
         </div>
 
-        <!--       LEFT SIDE         -->
-        <div data-role="panel" id="menuPanel" data-display="overlay" data-position="left">
-            <ul>
-                <li><img class="svg-icons" src="svg/favorite.svg" alt="favourite_icon">Ulubione trasy</li>
-                <li><img class="svg-icons" src="svg/recent.svg" alt="recent_icon">Ostatnie trasy</li>
-                <li><img class="svg-icons" src="svg/time.svg" alt="time_icon">Pomiary</li>
-                <li><img class="svg-icons" src="svg/challenge.svg" alt="challenge_icon">Wyzwanie</li>
-                <li><img class="svg-icons" src="svg/settings.svg" alt="settings_icon">Ustawienia</li>
-            </ul>
-            <button data-role="none" class="logOut">Wyloguj</button>
-        </div>
         <!--         RIGHT SIDE         -->
         <div data-role="panel" id="legendPanel" data-display="overlay" data-position="right">
 
 
             <div id="side">
-                <button id="trafficDisplay">Trafic</button>
-                <button id="bikeDisplay">Bikeee</button>
-                <button id="MapDisplay">Clear</button>
+                <button id="trafficDisplay" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/traffic.svg" alt="traffic_icon">Korki</button>
+                <button id="bikeDisplay" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/route.svg" alt="route_icon">Trasy rowerowe</button>
+                <button id="MapDisplay" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/delete.svg" alt="delete_icon">Wyczyść mapę</button>
                 <div id="addMarker">
-
-                    <button id="show" onclick="showMarkers()">pokaż wavelo</button>
-                    <button id="hide" onclick="clearMarkers()">ukryj wavelo</button>
-                    <a href="index.html">Delate U Markers </a>
+                    <button id="show" onclick="showMarkers()" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/challenge.svg" alt="challange_icon">Pokaż wavelo</button>
+                    <button id="hide" onclick="clearMarkers()" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/challenge.svg" alt="challenge_icon">Ukryj wavelo</button>
                 </div>
             </div>
         </div>
