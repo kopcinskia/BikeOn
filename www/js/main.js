@@ -1,23 +1,17 @@
 // ON LOAD
+
 google.maps.event.addDomListener(window, 'load', initMap)
 
 //GLOBAL VARIABLE
 let map,
     clickHAndler,
     pos,
-    test = {
-        lat: 53,
-        lng: 15
-    }
-
-var markers = [];
-var marker = []
-
-var directionsDisplay = new google.maps.DirectionsRenderer;
-var directionsService = new google.maps.DirectionsService;
+    markers = [],
+    marker = [],
+    directionsDisplay = new google.maps.DirectionsRenderer,
+    directionsService = new google.maps.DirectionsService
 //initialize Map
 function initMap() {
-
 
     //MAP
     map = new google.maps.Map(document.getElementById('map'), {
@@ -124,7 +118,8 @@ function initMap() {
                 positionMarker = new google.maps.Marker({
                     position: pos,
                     map: map,
-                    title: 'Your position'
+                    title: 'Your position',
+                    icon: 'img/special.png'
                 });
             //function on click matker
             positionMarker.addListener('click', function () {
@@ -132,25 +127,25 @@ function initMap() {
             });
 
         }, function () {
-            handleLocationError(true, marker, map.getCenter());
+            handleLocationError(true, marker, map.getCenter())
         });
     } else {
         // Browser doesn't support Geolocation
-        handleLocationError(false, marker, map.getCenter());
+        handleLocationError(false, marker, map.getCenter())
     }
 
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
+        infoWindow.setPosition(pos)
         infoWindow.setContent(browserHasGeolocation ?
             'Error: The Geolocation service failed.' :
-            'Error: Your browser doesn\'t support geolocation.');
+            'Error: Your browser doesn\'t support geolocation.')
         infoWindow.open(map);
     }
 
     //SEARCH
     // Create the search box and link it to the UI element.
-    let inputFinish = document.getElementById('pac-input')
-    var searchBox = new google.maps.places.SearchBox(inputFinish)
+    let inputFinish = document.getElementById('pac-input'),
+        searchBox = new google.maps.places.SearchBox(inputFinish)
 
     // Bias the SearchBox results towards current map's viewport.
     map.addListener('bounds_changed', function () {
@@ -159,68 +154,64 @@ function initMap() {
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
     searchBox.addListener('places_changed', function () {
-        var places = searchBox.getPlaces();
+        let places = searchBox.getPlaces()
         if (places.length == 0) {
             return;
         }
         // For each place, get the icon, name and location.
-        var bounds = new google.maps.LatLngBounds();
+        let bounds = new google.maps.LatLngBounds();
         places.forEach(function (place) {
             if (!place.geometry) {
-                console.log("Returned place contains no geometry");
+                console.log("Returned place contains no geometry")
                 return;
             }
             //push marker on ARR
             let selectIcon = document.querySelector('#iconType')
 
             marker.push(new google.maps.Marker({
-                icon: selectIcon.value,
+                icon: 'img/like.png',
                 map: map,
                 title: place.name,
                 position: place.geometry.location
             }));
             if (place.geometry.viewport) {
                 // Only geocodes have viewport.
-                bounds.union(place.geometry.viewport);
+                bounds.union(place.geometry.viewport)
             } else {
-                bounds.extend(place.geometry.location);
+                bounds.extend(place.geometry.location)
             }
 
         });
 
         map.fitBounds(bounds);
     });
+
     //DRAW ROAD
-
-
     directionsDisplay.setMap(map);
     //W tym elemęci wyswetlamy przebieg trasy
-    directionsDisplay.setPanel(document.getElementById('legendPanel'));
+    directionsDisplay.setPanel(document.getElementById('legendPanel'))
 
-    var onChangeHandler = function () {
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
+    const onChangeHandler = function () {
+        calculateAndDisplayRoute(directionsService, directionsDisplay)
     };
-    document.getElementById('start').addEventListener('click', onChangeHandler);
-
-
-
-
+    document.getElementById('start').addEventListener('click', onChangeHandler)
 
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        var start = pos
-        var end = marker[0].position
+        let start = pos,
+            end = marker[marker.length - 1].position
         directionsService.route({
             origin: start,
+            
             destination: end,
             travelMode: 'BICYCLING'
         }, function (response, status) {
             if (status === 'OK') {
                 directionsDisplay.setDirections(response);
             } else {
-                window.alert('Directions request failed due to ' + status);
+                window.alert('Directions request failed due to ' + status)
             }
         });
-        var fixedMap = document.getElementById('map');
+        let fixedMap = document.getElementById('map')
         fixedMap.style.position = "fixed";
     }
 
@@ -243,24 +234,24 @@ function initMap() {
             bikeLayer.setMap(null)
         })
     //LOAD JSON
-    let script = document.createElement('script');
+    let script = document.createElement('script')
     script.src = 'http://192.168.2.91:8080/JAzda/BikeOn/www/js/JSON/bikeStation.json'
-    document.getElementsByTagName('head')[0].appendChild(script);
+    document.getElementsByTagName('head')[0].appendChild(script)
 
     //JSON display
     window.eqfeed_callback = function (results) {
         for (var i = 0; i < results.favourite.length; i++) {
-            let title = results.favourite[i].name
-            let icon = results.favourite[i].iconType
-            let coords = results.favourite[i].geometry.coordinates
-            let latLng = new google.maps.LatLng(coords[0], coords[1])
-            let marker = new google.maps.Marker({
-                icon: icon,
-                position: latLng,
-                map: map,
-                title: title
-            });
-            markers.push(marker);
+            let title = results.favourite[i].name,
+                icon = results.favourite[i].iconType,
+                coords = results.favourite[i].geometry.coordinates,
+                latLng = new google.maps.LatLng(coords[0], coords[1]),
+                marker = new google.maps.Marker({
+                    icon: 'img/love.png',
+                    position: latLng,
+                    map: map,
+                    title: title
+                });
+            markers.push(marker)
         }
     }
 
@@ -272,8 +263,8 @@ function initMap() {
     }
 
 
-    var buttonShow = document.getElementById('show');
-    var buttonHide = document.getElementById('hide');
+    let buttonShow = document.getElementById('show'),
+        buttonHide = document.getElementById('hide')
     $('#show').click(function () {
         setMapOnAll(map);
         buttonShow.style.display = "none"
