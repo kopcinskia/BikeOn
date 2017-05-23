@@ -83,7 +83,7 @@ function initMap() {
                 featureType: "road.local",
                 elementType: "geometry",
                 stylers: [{
-                    color: "#cdc7b8"
+                    color: "#6cd07c"
                         }]
                     },
             {
@@ -165,8 +165,7 @@ function initMap() {
                 console.log("Returned place contains no geometry")
                 return;
             }
-            //push marker on ARR
-            let selectIcon = document.querySelector('#iconType')
+            
 
             marker.push(new google.maps.Marker({
                 icon: 'img/like.png',
@@ -235,7 +234,7 @@ function initMap() {
         })
     //LOAD JSON
     let script = document.createElement('script')
-    script.src = 'http://192.168.2.91:8080/JAzda/BikeOn/www/js/JSON/bikeStation.json'
+    script.src = 'http://10.200.4.42:8080/a/BikeOn/www/js/JSON/bikeStation.json'
     document.getElementsByTagName('head')[0].appendChild(script)
 
     //JSON display
