@@ -3,13 +3,7 @@ body {
 }
 
 
-/*-=/=--=/=--=/=--=/=--=/=--=/=--=/=-*/
-
-
 /*-=-=-=-=-=-Strona_Główna-=-=-=-=-=-*/
-
-
-/*-=/=--=/=--=/=--=/=--=/=--=/=--=/=-*/
 
 
 /* --- HEADER / PANELS--- */
@@ -32,13 +26,22 @@ body {
 }
 
 .svg-icons {
+    padding-top: 5px;
     padding-right: 13px;
     width: 14px;
 }
 
 .title,
-.marker-icon {
+.marker-icon,
+.title a {
     display: table-cell;
+}
+
+.title img {
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    width: 140px;
 }
 
 .title {
@@ -58,8 +61,6 @@ body {
     margin-left: 25px;
     text-shadow: none;
 }
-
-/*DODAŁEM CI TE 2 KLASY pageone i map OStyluj je porządnie */
 
 #pageoneMAP {
     margin: 0;
@@ -95,7 +96,8 @@ li {
     line-height: 50px;
 }
 
-#menuPanel, #legendPanel{
+#menuPanel,
+#legendPanel {
     background-color: #464B61;
 }
 
@@ -130,39 +132,66 @@ li {
     border-bottom: 0px;
 }
 
-#side{
+#side {
     line-height: 50px;
     margin-top: 20px;
 }
+
 
 /* --- CONTENT --- */
 
 
 /* --- FOOTER --- */
 
-/* --- Te dwa do poprawy, póki co niech będą żeby Panu Januszowi sie podobały --- */
-
-.ui-page-theme-b .ui-btn, html .ui-bar-b .ui-btn, html .ui-body-b .ui-btn, html body .ui-group-theme-b .ui-btn, html head+body .ui-btn.ui-btn-b, .ui-page-theme-b .ui-btn:visited, html .ui-bar-b .ui-btn:visited, html .ui-body-b .ui-btn:visited, html body .ui-group-theme-b .ui-btn:visited, html head+body .ui-btn.ui-btn-b:visited{
+.ui-page-theme-b .ui-btn,
+html .ui-bar-b .ui-btn,
+html .ui-body-b .ui-btn,
+html body .ui-group-theme-b .ui-btn,
+html head+body .ui-btn.ui-btn-b,
+.ui-page-theme-b .ui-btn:visited,
+html .ui-bar-b .ui-btn:visited,
+html .ui-body-b .ui-btn:visited,
+html body .ui-group-theme-b .ui-btn:visited,
+html head+body .ui-btn.ui-btn-b:visited {
     background-color: rgba(52, 59, 71, 0.34);
     border: none;
 }
 
-.ui-page-theme-b .ui-btn.ui-btn-active, html .ui-bar-b .ui-btn.ui-btn-active, html .ui-body-b .ui-btn.ui-btn-active, html body .ui-group-theme-b .ui-btn.ui-btn-active, html head+body .ui-btn.ui-btn-b.ui-btn-active, .ui-page-theme-b .ui-checkbox-on:after, html .ui-bar-b .ui-checkbox-on:after, html .ui-body-b .ui-checkbox-on:after, html body .ui-group-theme-b .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-b:after, .ui-page-theme-b .ui-flipswitch-active, html .ui-bar-b .ui-flipswitch-active, html .ui-body-b .ui-flipswitch-active, html body .ui-group-theme-b .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-b.ui-flipswitch-active, .ui-page-theme-b .ui-slider-track .ui-btn-active, html .ui-bar-b .ui-slider-track .ui-btn-active, html .ui-body-b .ui-slider-track .ui-btn-active, html body .ui-group-theme-b .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-b .ui-btn-active{
+.ui-page-theme-b .ui-btn.ui-btn-active,
+html .ui-bar-b .ui-btn.ui-btn-active,
+html .ui-body-b .ui-btn.ui-btn-active,
+html body .ui-group-theme-b .ui-btn.ui-btn-active,
+html head+body .ui-btn.ui-btn-b.ui-btn-active,
+.ui-page-theme-b .ui-checkbox-on:after,
+html .ui-bar-b .ui-checkbox-on:after,
+html .ui-body-b .ui-checkbox-on:after,
+html body .ui-group-theme-b .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-b:after,
+.ui-page-theme-b .ui-flipswitch-active,
+html .ui-bar-b .ui-flipswitch-active,
+html .ui-body-b .ui-flipswitch-active,
+html body .ui-group-theme-b .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-b.ui-flipswitch-active,
+.ui-page-theme-b .ui-slider-track .ui-btn-active,
+html .ui-bar-b .ui-slider-track .ui-btn-active,
+html .ui-body-b .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-b .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-b .ui-btn-active {
     background-color: rgba(52, 59, 71, 0.84);
     box-shadow: none;
     text-shadow: none;
 }
 
-#iconType img{
+#iconType img {
     width: 35px;
 }
 
-#iconType ul{
+#iconType ul {
     display: flex;
     justify-content: space-between;
 }
 
-#iconType ul li{
+#iconType ul li {
     width: auto;
 }
 
@@ -300,4 +329,100 @@ input:focus:-ms-input-placeholder {
     padding: 12px 32px;
     text-align: center;
     text-decoration: none;
+}
+
+#description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    display: none;
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-family: Roboto;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+
+/*Road*/
+
+.adp-summary {
+    color: white;
+    background-color: #e45757;
+}
+
+.adp-substep {
+    color: white;
+}
+
+
+/*KLASA DO check box-a!!!*/
+
+.pac-container {
+    background-color: #FCF7EE;
+    z-index: 1500;
+}
+
+
+}
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+.pac-controls label {
+    background-color: #FCF7EE;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+/*Nowa trasa --> Miejsce docelowe*/
+#pac-input {}
+#pac-input:focus {
+    border-color: #FCF7EE;
+}
+#title {
+    color: #fff;
+    background-color: #FCF7EE;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+#target {
+    width: 345px;
+}
+.copyright {
+    text-align: center;
+    background-color: #464B61;
+}
+.copyright p {
+    padding-bottom: 15px;
+    font-size: 20px;
+    color: #FCF7EE;
+    margin: 0;
+}
+.copyright a {
+    color: #FCF7EE;
 }

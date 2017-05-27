@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
     <!--    Mine     -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/custom.css">
     <!--     Google fonts     -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <title>BikeOn!</title>
 </head>
+
 <body>
     <div data-role="page" id="pageone">
         <!--        HEADER         -->
         <div data-role="header" data-position="fixed" data-theme="header-element">
+
             <div class="title">
+                <a href="http://kopcinskia.000webhostapp.com">
+                    <img src="https://kopcinskia.000webhostapp.com/images/logoAK.png" alt="logo">
+                </a>
                 <h1>
                     <g>Bike</g>On!</h1>
             </div>
@@ -34,6 +38,9 @@
             <div class="footer-container">
                 <a href="#popupNewRoad" data-rel="popup" data-transition="pop" data-role="none"><button class="newRoute" data-role="none">Nowa Trasa</button></a>
             </div>
+            <div class="copyright">
+                    <p>Copyright 2017 &copy;   @Kopcińskia</p>
+            </div>
         </div>
         <!--      Some popup Display     -->
         <div data-role="popup" id="popupNewRoad" data-overlay-theme="b" data-position-to="window" data-theme="b" data-dismissible="false">
@@ -43,17 +50,17 @@
             <div id="search">
                 <input id="pac-input" class="controls" type="text" placeholder="Cel podróży:" data-role="none">
 
-   
+
                 <div data-role="navbar" id="iconType">
-             
 
-                <div id="newtrackButtons">
-                    <a href="#legendPanel" id="start" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Start</a>
-                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Anuluj</a>
+
+                    <div id="newtrackButtons">
+                        <a href="#legendPanel" id="start" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Start</a>
+                        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Anuluj</a>
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
 
 
         </div>
@@ -67,7 +74,7 @@
                 <button id="MapDisplay" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/delete.svg" alt="delete_icon">Wyczyść mapę</button>
                 <div id="addMarker">
 
-                    
+
                     <button id="show" onclick="showMarkers()" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/challenge.svg" alt="challange_icon">Pokaż wavelo</button>
                     <button id="hide" onclick="clearMarkers()" data-role="none" class="RightButtons"><img class="svg-icons" src="svg/challenge.svg" alt="challenge_icon">Ukryj wavelo</button>
 
@@ -75,6 +82,8 @@
             </div>
         </div>
     </div>
+
+
     <!--     Google MAP API     -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-_pwDzmgch72gqHA6iZ9tx3JxI7ZRxho&libraries=places">
     </script>
