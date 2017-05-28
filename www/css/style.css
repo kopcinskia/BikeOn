@@ -1,36 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 body {
     font-family: 'Lato', sans-serif;
 }
-
-
 /*-=-=-=-=-=-Strona_Główna-=-=-=-=-=-*/
-
-
 /* --- HEADER / PANELS--- */
-
 .header {
     padding: 15px 10px 0;
     position: fixed !important;
 }
-
 .ui-bar-header-element {
     background-color: #464B61;
     border-color: #464B61;
     color: white;
     z-index: 1000;
 }
-
 .svg-map {
     margin: 0 8px;
     width: 21px;
 }
-
 .svg-icons {
     padding-top: 5px;
     padding-right: 13px;
     width: 14px;
 }
-
 .title,
 .marker-icon,
 .title a {
@@ -43,7 +36,6 @@ body {
     left: 20px;
     width: 140px;
 }
-
 .title {
     margin-left: 2px;
     text-align: center;

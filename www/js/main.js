@@ -1,7 +1,5 @@
 // ON LOAD
-
 google.maps.event.addDomListener(window, 'load', initMap)
-
 //GLOBAL VARIABLE
 let map,
     clickHAndler,
@@ -12,7 +10,6 @@ let map,
     directionsService = new google.maps.DirectionsService
 //initialize Map
 function initMap() {
-
     //MAP
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -99,7 +96,6 @@ function initMap() {
                     }
                 ]
     });
-
     //GEOLOCATION
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -125,7 +121,6 @@ function initMap() {
             positionMarker.addListener('click', function () {
                 infowindow.open(map, positionMarker)
             });
-
         }, function () {
             handleLocationError(true, marker, map.getCenter())
         });
@@ -133,7 +128,6 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, marker, map.getCenter())
     }
-
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos)
         infoWindow.setContent(browserHasGeolocation ?
@@ -141,12 +135,10 @@ function initMap() {
             'Error: Your browser doesn\'t support geolocation.')
         infoWindow.open(map);
     }
-
     //SEARCH
     // Create the search box and link it to the UI element.
     let inputFinish = document.getElementById('pac-input'),
         searchBox = new google.maps.places.SearchBox(inputFinish)
-
     // Bias the SearchBox results towards current map's viewport.
     map.addListener('bounds_changed', function () {
         searchBox.setBounds(map.getBounds());
@@ -165,8 +157,6 @@ function initMap() {
                 console.log("Returned place contains no geometry")
                 return;
             }
-            
-
             marker.push(new google.maps.Marker({
                 icon: 'img/like.png',
                 map: map,
@@ -179,22 +169,17 @@ function initMap() {
             } else {
                 bounds.extend(place.geometry.location)
             }
-
         });
-
         map.fitBounds(bounds);
     });
-
     //DRAW ROAD
     directionsDisplay.setMap(map);
     //W tym elemęci wyswetlamy przebieg trasy
     directionsDisplay.setPanel(document.getElementById('legendPanel'))
-
     const onChangeHandler = function () {
         calculateAndDisplayRoute(directionsService, directionsDisplay)
     };
     document.getElementById('start').addEventListener('click', onChangeHandler)
-
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         let start = pos,
             end = marker[marker.length - 1].position
@@ -213,13 +198,10 @@ function initMap() {
         let fixedMap = document.getElementById('map')
         fixedMap.style.position = "fixed";
     }
-
-
     //BUTONS
     let
         trafficLayer = new google.maps.TrafficLayer(),
         bikeLayer = new google.maps.BicyclingLayer()
-
     $('#trafficDisplay').click(function () {
             trafficLayer.setMap(map)
             bikeLayer.setMap(null)
@@ -234,9 +216,8 @@ function initMap() {
         })
     //LOAD JSON
     let script = document.createElement('script')
-    script.src = 'http://10.200.4.42:8080/a/BikeOn/www/js/JSON/bikeStation.json'
+    script.src = 'https://kopcinskia.000webhostapp.com/portfolio/BikeOn/js/JSON/bikeStation.json'
     document.getElementsByTagName('head')[0].appendChild(script)
-
     //JSON display
     window.eqfeed_callback = function (results) {
         for (var i = 0; i < results.favourite.length; i++) {
@@ -253,22 +234,18 @@ function initMap() {
             markers.push(marker)
         }
     }
-
     // Sets the map on all markers in the array.
     function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(map);
         }
     }
-
-
     let buttonShow = document.getElementById('show'),
         buttonHide = document.getElementById('hide')
     $('#show').click(function () {
         setMapOnAll(map);
         buttonShow.style.display = "none"
         buttonHide.style.display = "block"
-
     })
     $('#hide').click(function () {
         setMapOnAll(null);
